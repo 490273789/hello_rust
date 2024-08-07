@@ -1,14 +1,16 @@
 mod control_flow;
 mod data_type;
 mod enumeration;
-mod function;
-mod ownership;
-mod struct_part;
-mod vector_part;
-mod string_part;
-mod hash_map_part;
 mod error_part;
+mod function;
+mod hash_map_part;
+mod lifecycle;
+mod ownership;
+mod slice;
+mod string_part;
+mod struct_part;
 mod trait_part;
+mod vector_part;
 
 // trait
 
@@ -49,6 +51,7 @@ fn main() {
     control_flow::control_flow_mod();
     // 所有权
     ownership::ownership_mod();
+    ownership::quote_borrow();
     // 结构体
     struct_part::struct_mod();
     struct_part::struct_method_mod();
@@ -72,4 +75,10 @@ fn main() {
 
     // trait
     trait_part::trait_base_mod();
+
+    // 生命周期
+    lifecycle::lifecycle_mod();
+
+    // 切片
+    slice::slice_mod();
 }
