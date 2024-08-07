@@ -1,3 +1,5 @@
+use std::fmt::{Debug, Display};
+
 use hello_rust::{Summary, Tweet};
 
 pub fn trait_base_mod() {
@@ -16,11 +18,11 @@ pub fn trait_base_mod() {
     // 与类型方法类似，不同之处：
     // impl Xxxx for Summary{}
 
-    let tweet = Tweet{
-      username: String::from("horse_ebooks"),
-      content: String::from("of course, as you probably already know, people"),
-      reply: false,
-      retweet: false
+    let tweet = Tweet {
+        username: String::from("horse_ebooks"),
+        content: String::from("of course, as you probably already know, people"),
+        reply: false,
+        retweet: false,
     };
 
     println!("1 new tweet: {}", tweet.summarize());
@@ -29,13 +31,29 @@ pub fn trait_base_mod() {
     // 可以在某个类型上实现某个trait的前提条件是：
     // - 这个类型 或 这个trait 是在本地crate里面定义的
 
-
     // trait参数 - impl Trait  fn notify (item: impl Summary) {}
     // trait参数 - impl Trait  fn notify (item: impl Summary + Display) {}
 
     // Trait bound:用于复杂的情况 fn notify<T: Summary> (item: T) {}
 
-
-
     println!();
+}
+
+fn notify<T: Summary + Display, U: Debug + Clone>(a: T, b: U) -> String {
+    String::from("a")
+}
+
+// 传入trait等同于上面的写法
+// 返回trait
+fn notify1<T, U>(a: T, b: U) -> impl Summary
+where
+    T: Summary + Display,
+    U: Debug + Clone,
+{
+    Tweet {
+        username: String::from("horse_ebooks"),
+        content: String::from("of course, as you probably already know, people"),
+        reply: false,
+        retweet: false,
+    }
 }
