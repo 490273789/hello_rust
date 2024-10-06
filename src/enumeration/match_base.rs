@@ -59,3 +59,7 @@ fn if_let() {
         println!("other");
     }
 }
+
+
+// workspace
+// 一个workspace可以包含一个到多个crates，当代吗改变的时候，只有涉及的crates才需要重新编译

@@ -16,16 +16,20 @@ mod vector_part;
 
 const MAX_NUMBER: u32 = 32;
 
+// crate
+// library crate (1)
+// binary crate (n)
 fn main() {
     // rust默认会导入prelude这个库，不在这个库内的就需要自己手动导入了
-    // println! 注意这个!是调用宏(macro), 调用函数不需要加感叹号
-    // &:str & 引用指针
+    // println! 注意这个“!”是调用宏(macro), 调用函数不需要加感叹号
+    // &:str - & 引用指针
     println!("Hello, world!");
+
     // 变量
     // 强制类型转换
     let num = 3.1;
     let _num1 = num as i32; // 未使用的变量可以加_,消除命令行的报错
-                            // shallowing variables 影子变量
+                            // shadowing variables 影子变量
     let num = 4.1; // 可以使用相同的变量名覆盖上一个变量
     println!("num is: {num}");
 
@@ -38,10 +42,12 @@ fn main() {
     println!("常量 MAX_NUMBER: {MAX_NUMBER}");
 
     println!("----- 标量类型 - Scalar Types -----");
+    // “::” 访问标准库中公开可用的API
     data_type::integer_mod();
     data_type::floating_point_mod();
     data_type::boolean_mod();
     data_type::characters_mod();
+
     println!("----- 复合类型 - Compound Types -----");
     data_type::array_mod();
     data_type::tuple_mod();

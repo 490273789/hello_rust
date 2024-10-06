@@ -3,9 +3,9 @@ use std::{fs::File, io::ErrorKind};
 pub fn error_handle_mod() {
     println!("----- error handle ------");
     //  错误分类
-    // - 可恢复错误：例如文件未找到，可再次尝试
+    // 1、可恢复错误：例如文件未找到，可再次尝试
     // -- Result<T,E>
-    // - 不可恢复错误：bug，例如访问索引超出范围
+    // 2、不可恢复错误：bug，例如访问索引超出范围
     // -- panic! 宏
     // -- panic! 执行后
     // 1 会打印一个错误信息
@@ -22,7 +22,7 @@ pub fn error_handle_mod() {
     // 在Cargo.toml 文件中设置profile部分，将panic = "abort"
 
     // panic!("crash"); // 执行这段代码程序将会崩溃
-    // 设置环境变量 RUST_BACKTRACE=1 可以字啊控制台看到详细的回朔信息
+    // 设置环境变量 RUST_BACKTRACE=1 可以在控制台看到详细的回朔信息
 
     // 可恢复错误
     // enum Result<T, E> {
