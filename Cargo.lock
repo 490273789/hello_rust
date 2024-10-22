@@ -240,6 +240,9 @@ dependencies = [
 [[package]]
 name = "control_flow"
 version = "0.1.0"
+dependencies = [
+ "rand",
+]
 
 [[package]]
 name = "core-foundation"
@@ -353,6 +356,10 @@ checksum = "e13624c2627564efccf4934284bdd98cbaa14e79b0b5a141218e507b3a823456"
 dependencies = [
  "percent-encoding",
 ]
+
+[[package]]
+name = "function"
+version = "0.1.0"
 
 [[package]]
 name = "futf"

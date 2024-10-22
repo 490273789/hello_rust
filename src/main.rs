@@ -1,7 +1,6 @@
-mod control_flow;
+
 mod enumeration;
 mod error_part;
-mod function;
 mod hash_map_part;
 mod lifecycle;
 mod ownership;
@@ -17,10 +16,7 @@ fn main() {
   // println! 注意这个“!”是调用宏(macro), 调用函数不需要加感叹号
   // &:str - & 引用指针
   println!("Hello, Rust!");
-  // 函数 - function
-  // function::function_mod();
-  // 流程控制
-  // control_flow::control_flow_mod();
+
   // 所有权
   // ownership::ownership_mod();
   // ownership::quote_borrow();
