@@ -23,6 +23,33 @@ pub fn integer_mod() {
   let price: i32 = 999;
   println!("price is {price}");
 
+  // NaN not a number
+  let nan = (-42.0_f32).sqrt();
+  // assert_eq!(nan, nan);
+  if nan.is_nan() {
+    println!("未定义的数学行为");
+  }
+
+  // 数字运算符
+  // + - * / %
+  // 位运算
+  // & | ^ ! << >>
+  let binary:u8 = 2;
+  // {:08b} 输出二进制01，不足8为则高位补0
+  println!("binary is {:08b}", binary);
+  println!("binary is {:08b}", !binary);
+
+  // 序列 - range
+  // 用来生成连续的数值
+  // 1..5 生成1到4数字
+  // 1..=5 生成1 到 5 的数字
+  // 字符和数字值是 Rust 中仅有的可以用于判断是否为空的类型。
+  for i in 1..5 {
+    println!("{}", i);
+  }
+  for i in 'a'..'f' {
+    println!("{}", i);
+  }
   println!("---- end -----");
   println!()
 }

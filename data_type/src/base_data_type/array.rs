@@ -31,8 +31,10 @@ pub fn array_mod() {
     println!("使用get方法访问，避免索引越界");
     match arr1.get(1){
         Some(value) => println!("arr1's ele2 is: {value}"),
-        _Node => println!("value not found")
+        _node => println!("value not found")
     }
+
+
     println!("----- end -----");
     println!();
 }

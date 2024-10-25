@@ -7,10 +7,12 @@ pub fn characters_mod() {
   // U+0000 ～ U+D7FF
   // U+E000 ~ U+10FFFF
   // 注意用单引号表示字符类型
-  let c: char = 'c';
+  let a: char = 'a';
   let z = 'ℤ';
-  println!("c is: {}", c);
-  println!("z is: {}", z);
+  let c = '国';
+  println!("c is: {c}");
+  println!("z is: {z}");
+  println!("z is: {c}");
 
   println!("---- end -----");
   println!()

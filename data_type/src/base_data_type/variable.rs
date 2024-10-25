@@ -35,8 +35,8 @@ pub fn variable() {
 
   // 强制类型转换
   let num = 3.1;
-  let _num1 = num as i32; // 未使用的变量可以加_,消除命令行的报错
-  // shadowing variables 影子变量 相当于创建了一个新的变量
+  let _num1 = num as i32; // 忽略未使用的变量可以加“_”
+  // shadowing variables 变量遮蔽 相当于创建了一个新的变量
   let num = 4; // 可以使用相同的变量名覆盖上一个变量
   println!("num is: {num}");
 
