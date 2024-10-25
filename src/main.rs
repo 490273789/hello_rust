@@ -3,7 +3,6 @@ mod enumeration;
 mod error_part;
 mod hash_map_part;
 mod lifecycle;
-mod ownership;
 mod trait_part;
 mod vector_part;
 
@@ -16,10 +15,6 @@ fn main() {
   // println! 注意这个“!”是调用宏(macro), 调用函数不需要加感叹号
   // &:str - & 引用指针
   println!("Hello, Rust!");
-
-  // 所有权
-  // ownership::ownership_mod();
-  // ownership::quote_borrow();
 
   // enumeration::enum_base_mod();
   // enumeration::match_base_mod();

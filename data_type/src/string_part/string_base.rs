@@ -4,10 +4,10 @@ pub fn string_base_mod() {
     // rust核心语言层面，只有一个字符串类型：字符串切片str（&str）
     // 字符串切片：对存储在其他地方的UTF-8编码的字符串的引用
     // 字符串字面值存储在二进制文件中，也是字符串切片
-    // Sting 类型
+    // Sting 类型 动态的字符串类型
     // - 来自标准库而不是核心语言
     // - 可增长、可修改、可拥有
-
+    // String类型是由栈中的堆指针、字符串的长度、字符串的容量共同组成
     // 创建
     // String::new()
     let mut s1 = String::new();
@@ -16,7 +16,7 @@ pub fn string_base_mod() {
 
     // 使用初始值来创建String
     // - to_string()方法，可用于实现了Display trait 的类型，包括字符串字面值
-    let name = "wsn";
+    let name = "wsn"; // 字符串字面值是不可变的，因为被硬编码到程序代码中
     let mut s_name = name.to_string();
     let she_name = "qhy".to_string();
     println!("s_name is {s_name}");
