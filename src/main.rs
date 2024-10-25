@@ -1,5 +1,4 @@
 
-mod enumeration;
 mod error_part;
 mod hash_map_part;
 mod lifecycle;
@@ -15,10 +14,6 @@ fn main() {
   // println! 注意这个“!”是调用宏(macro), 调用函数不需要加感叹号
   // &:str - & 引用指针
   println!("Hello, Rust!");
-
-  // enumeration::enum_base_mod();
-  // enumeration::match_base_mod();
-
   // vector
   // vector_part::vector_base_mod();
   // vector_part::vector_loop_mod();

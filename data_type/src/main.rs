@@ -1,5 +1,6 @@
 mod base_data_type;
 mod string_part;
+mod enumeration;
 
 fn main() {
   // "base", "integer", "float", "string", "array", "slice", "struct"
@@ -22,8 +23,13 @@ fn main() {
     base_data_type::array_mod();
     base_data_type::tuple_mod();
   }
-  if(types.contains(&"string")) {
-    string_part::string_base_mod()
+  if types.contains(&"string") {
+    string_part::string_base_mod();
+    string_part::string_deep();
+  }
+  if types.contains(&"enumeration") {
+    enumeration::enum_base_mod();
+    enumeration::match_base_mod();
   }
 
 
