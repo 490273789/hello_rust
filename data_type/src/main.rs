@@ -4,7 +4,7 @@ mod enumeration;
 
 fn main() {
   // "base", "integer", "float", "string", "array", "slice", "struct"
-  let types = ["string"];
+  let types = ["array"];
   if types.contains(&&"base"[..]) {
     // “::” 访问标准库中公开可用的API
     base_data_type::variable();
