@@ -6,7 +6,7 @@ mod struct_part;
 
 fn main() {
     // "base", "integer", "float", "string", "array", "slice", "struct"
-    let types = [r#"struct"#];
+    let types = [r#"enumeration"#];
     if types.contains(&&"base"[..]) {
         // “::” 访问标准库中公开可用的API
         base_data_type::variable();
