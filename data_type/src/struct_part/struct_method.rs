@@ -5,8 +5,10 @@ struct Rectangle {
 }
 
 // 一个结构体可以有多个impl 块
+// 方法跟函数的区别
 impl Rectangle {
     // 结构体方法的定义
+    // &self -> self: &Self
     fn rectangle_area(&self) -> u32 {
         self.width * self.height
     }
@@ -54,8 +56,8 @@ pub fn struct_method_mod() {
     );
 
     // :: 符号
-    // -1、用于调用关联函数
-    // -2、模块创建的命名空间
+    // 1、用于调用关联函数
+    // 2、模块创建的命名空间
     let square = Rectangle::square(10);
     println!("square is {:#?}", square);
 
@@ -72,9 +74,9 @@ mod test {
             height: 50,
         };
         let smaller = Rectangle {
-          width: 8,
-          height: 20,
-      };
-      assert!(larger.can_hold(&smaller));
+            width: 8,
+            height: 20,
+        };
+        assert!(larger.can_hold(&smaller));
     }
 }
