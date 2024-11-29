@@ -8,4 +8,4 @@ rand = "0.8.5"
 
 [workspace]
 
-members = [ "control_flow", "data_type", "error_handle", "function", "http_ie", "lifecycle", "ownership","scrape_url",]
+members = [ "code_organize", "control_flow", "data_type", "error_handle", "function", "http_ie", "lifecycle", "ownership","scrape_url",]
