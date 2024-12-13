@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/lifecycle/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ownership/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/function/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code_organize/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
