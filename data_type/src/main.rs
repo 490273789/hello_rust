@@ -1,12 +1,17 @@
+
+
 mod base_data_type;
 mod enumeration;
 mod slice_part;
 mod string_part;
 mod struct_part;
+mod hash_map;
+
+
 
 fn main() {
     // "base", "integer", "float", "string", "array", "slice", "struct"
-    let types = [r#"enumeration"#];
+    let types = ["hash"];
     if types.contains(&&"base"[..]) {
         // “::” 访问标准库中公开可用的API
         base_data_type::variable();
@@ -40,6 +45,9 @@ fn main() {
         struct_part::struct_mod();
         struct_part::struct_method_mod();
         struct_part::struct_category_mod();
+    }
+    if types.contains(&"hash") {
+        hash_map::hash_map_use();
     }
 
     // // 结构体

@@ -274,13 +274,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "csv_process"
-version = "0.1.0"
-dependencies = [
- "clap",
-]
-
-[[package]]
 name = "data_type"
 version = "0.1.0"
 
